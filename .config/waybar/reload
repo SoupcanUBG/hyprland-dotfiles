@@ -1,0 +1,5 @@
+#!/bin/bash
+pkill -9 waybar
+nohup waybar &
+sleep 0.3
+rm -rf nohup.out
