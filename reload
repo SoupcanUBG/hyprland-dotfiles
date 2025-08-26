@@ -1,6 +1,7 @@
 #!/bin/bash
 
 rm -rf ./.config/*
+rm -rf ./Pictures/wallpapers/*
 cp -r ~/.config/waybar ./.config/
 cp -r ~/.config/cava ./.config/
 cp -r ~/.config/hypr ./.config/
@@ -10,4 +11,4 @@ cp -r ~/.config/rofi ./.config/
 cp -r ~/.config/starship.toml ./.config/
 cp -r ~/.config/fastfetch/ ./.config/
 cp -r ~/.config/swaync/ ./.config/
-
+cp -r ~/Pictures/wallpapers/* ./Pictures/wallpapers/
