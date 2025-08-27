@@ -1,0 +1,105 @@
+/**
+ * Custom Rofi theme based on uploaded dusk/dawn cityscape
+ */
+
+* {
+    background-color: #181a2b;
+    text-color: #f3ecff;
+    show-icons: true;
+    show-entry-description: false;
+}
+
+window {
+    height: 600;
+    width: 600;
+
+    border: 3;
+    border-radius: 10;
+    border-color: #d3a6ff;
+}
+
+mainbox {
+    spacing: 0;
+    children: [inputbar, message, listview];
+}
+
+inputbar {
+    padding: 14;
+    background-color: #181a2b;
+    text-color: #f3ecff;
+}
+
+message {
+    padding: 10;
+    background-color: #3b3e5c;
+}
+
+listview {
+    padding: 8;
+    border-radius: 0 0 10 10;
+    border: 2 2 2 2;
+    border-color: #181a2b;
+    background-color: #181a2b;
+    dynamic: false;
+}
+
+textbox {
+    text-color: #f3ecff;
+    background-color: inherit;
+}
+
+entry, prompt, case-indicator {
+    text-color: inherit;
+}
+
+prompt {
+    margin: 0 10 0 0;
+}
+
+element {
+    padding: 5;
+    vertical-align: 0.5;
+    border-radius: 10;
+    background-color: #262840;
+}
+
+element.selected.normal {
+    background-color: #3b3e5c;
+}
+
+element.alternate.normal {
+    background-color: inherit;
+}
+
+element.normal.active, element.alternate.active {
+    background-color: #ff8fa3;
+    text-color: #181a2b;
+}
+
+element.selected.active {
+    background-color: #ff8fa3;
+    text-color: #181a2b;
+}
+
+element.normal.urgent, element.alternate.urgent {
+    background-color: #ff6b81;
+    text-color: #181a2b;
+}
+
+element.selected.urgent {
+    background-color: #d3a6ff;
+    text-color: #181a2b;
+}
+
+element-text, element-icon {
+    size: 40;
+    margin: 0 10 0 0;
+    vertical-align: 0.5;
+    background-color: inherit;
+    text-color: #f3ecff;
+}
+
+element-text .active, element-text .urgent {
+    text-color: #181a2b;
+}
+

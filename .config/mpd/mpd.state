@@ -1,10 +1,10 @@
-sw_volume: 70
+sw_volume: 85
 audio_device_state:1:PipeWire Sound Server
 audio_device_state:1:HTTP Stream
 audio_device_state:1:lossless
 state: pause
-current: 94
-time: 0.593
+current: 43
+time: 168.145
 random: 1
 repeat: 0
 single: 0

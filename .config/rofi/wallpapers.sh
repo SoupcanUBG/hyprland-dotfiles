@@ -12,3 +12,4 @@ chosen=$(ls "$wall_dir" | rofi -dmenu -i -p "Select wallpaper:" \
 
 # Run swww with transition
 swww img "$wall_dir/$chosen" --transition-type wipe --transition-angle 30 --transition-step 90
+wallust run "$wall_dir/$chosen"

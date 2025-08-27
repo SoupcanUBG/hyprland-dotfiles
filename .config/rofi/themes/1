@@ -1,0 +1,97 @@
+* {
+    background-color: @background;   /* you can set @background in Xresources */
+    text-color: @color7;
+    show-icons: true;
+    show-entry-description: false;
+}
+
+window {
+    border: 3;
+    border-radius: 10;
+    border-color: @color5;
+    background-color: @color0;
+    width: 600;
+    height: 600;
+}
+
+mainbox {
+    spacing: 0;
+    children: [inputbar, message, listview];
+}
+
+inputbar {
+    color: @color7;
+    padding: 14;
+    background-color: @color0;
+}
+
+message {
+    padding: 10;
+    background-color: @color6;
+}
+
+listview {
+    padding: 8;
+    border-radius: 0 0 10 10;
+    border: 2 2 2 2;
+    border-color: @color0;
+    background-color: @color0;
+    dynamic: false;
+}
+
+textbox {
+    text-color: @color7;
+    background-color: inherit;
+}
+
+entry, prompt, case-indicator {
+    text-color: inherit;
+}
+
+prompt {
+    margin: 0 10 0 0;
+}
+
+element {
+    padding: 5;
+    vertical-align: 0.5;
+    border-radius: 10;
+    background-color: @color1;
+}
+
+element.selected.normal {
+    background-color: @color6;
+}
+
+element.alternate.normal {
+    background-color: inherit;
+}
+
+element.normal.active, element.alternate.active {
+    background-color: @color3;
+}
+
+element.selected.active {
+    background-color: @color2;
+}
+
+element.normal.urgent, element.alternate.urgent {
+    background-color: @color1;
+}
+
+element.selected.urgent {
+    background-color: @color5;
+}
+
+element-text, element-icon {
+    size: 40;
+    margin: 0 10 0 0;
+    vertical-align: 0.5;
+    background-color: inherit;
+    text-color: @color7;
+}
+
+element-text .active, element-text .urgent {
+    text-color: @color0;
+}
+

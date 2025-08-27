@@ -566,3 +566,13 @@
 2025-08-27T02:41:15 config: option "buffer_time" on line 21 was not recognized
 2025-08-27T02:41:15 server_socket: bind to '0.0.0.0:8000' failed (continuing anyway, because binding to '[::]:8000' succeeded): Failed to bind socket: Address already in use
 2025-08-27T02:41:15 exception: Failed to enable output "lossless" (httpd); Failed to bind to '[::]:8000'; Failed to bind socket: Address already in use
+2025-08-27T03:45:32 exception: Failed to enable output "lossless" (httpd); Failed to bind to '[::]:8000'; Failed to bind socket: Address already in use
+2025-08-27T03:45:36 exception: Failed to enable output "lossless" (httpd); Failed to bind to '[::]:8000'; Failed to bind socket: Address already in use
+2025-08-27T03:45:37 exception: Failed to enable output "lossless" (httpd); Failed to bind to '[::]:8000'; Failed to bind socket: Address already in use
+2025-08-27T03:49:56 pipewire_output: Decoder is too slow; playing silence to avoid xrun
+2025-08-27T03:49:56 player: played "MF DOOM - One Beer.flac"
+2025-08-27T03:49:56 exception: Failed to enable output "lossless" (httpd); Failed to bind to '[::]:8000'; Failed to bind socket: Address already in use
+2025-08-27T03:51:53 player: played "SadBoyProlific, ivri - Scars.flac"
+2025-08-27T03:51:53 exception: Failed to enable output "lossless" (httpd); Failed to bind to '[::]:8000'; Failed to bind socket: Address already in use
+2025-08-27T03:54:46 player: played "MF DOOM, Mr. Fantastik - Rapp Snitch Knishes.flac"
+2025-08-27T03:54:46 exception: Failed to enable output "lossless" (httpd); Failed to bind to '[::]:8000'; Failed to bind socket: Address already in use

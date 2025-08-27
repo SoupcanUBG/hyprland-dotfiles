@@ -1,0 +1,65 @@
+/* ~/.config/rofi/themes/wallust.rasi */
+
+* {
+    background: #313244;
+    foreground: #cdd6f4;
+    border: 2px solid #cba6f7;
+    border-radius: 5px;
+    spacing: 5px;
+    padding: 10px;
+},
+
+window {
+    background-color: @background;
+    border-color: @border;
+},
+
+mainbox {
+    border-color: @border;
+},
+
+listview {
+    background-color: @background;
+    border-color: @border;
+    scrollbar-width: 8px;
+},
+
+element {
+    border-radius: 4px;
+    padding: 4px 8px;
+},
+
+element normal {
+    background-color: transparent;
+    color: @foreground;
+},
+
+element selected {
+    background-color: #fab387; /* color3 */
+    color: #313244; /* color0 */
+},
+
+element urgent {
+    background-color: #f38ba8; /* color1 */
+    color: #313244; /* color0 */
+},
+
+textbox {
+    background-color: transparent;
+    color: @foreground;
+},
+
+inputbar {
+    background-color: #6c7086; /* color6 */
+    border-radius: 4px;
+},
+
+scrollbar {
+    background-color: #6c7086; /* color6 */
+},
+
+message {
+    color: @foreground;
+    background-color: transparent;
+}:
+
