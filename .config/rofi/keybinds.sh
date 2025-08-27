@@ -1,45 +1,20 @@
 #!/bin/bash
 
-THEME="/home/toby/.config/rofi/catppuccin-lavrent-mocha.rasi"
+HYPR_CONF="$HOME/.config/hypr/keybinds.conf"
 
-options="\
-SUPER + Return        → Terminal
-SUPER + B             → Browser
-SUPER + E             → File Manager
-SUPER + Q             → Kill Active Window
-SUPER + M             → Exit Hyprland
-SUPER + D             → App Launcher (Rofi)
-SUPER + V             → Toggle Floating
-SUPER + F             → Toggle Fullscreen
-SUPER + Space         → Toggle Floating
-SUPER + P             → Pseudo Split
-SUPER + J             → Toggle Split
-SUPER + SHIFT + S     → Screenshot (hyprshot)
+# extract the keybinding from hyprland.conf
+mapfile -t BINDINGS < <(grep '^bind=' "$HYPR_CONF" |
+  sed -e 's/  */ /g' -e 's/bind=//g' -e 's/, /,/g' -e 's/ # /,/' |
+  awk -F, -v q="'" '{cmd=""; for(i=3;i<NF;i++) cmd=cmd $(i) " ";print "<b>"$1 " + " $2 "</b>  <i>" $NF ",</i><span color=" q "gray" q ">" cmd "</span>"}')
 
-SUPER + Arrow Keys    → Move Focus
-SUPER + [1-9,0]       → Switch Workspace
-SUPER + SHIFT + [1-9,0] → Move Window to Workspace
-SUPER + S             → Special Workspace (magic)
+CHOICE=$(printf '%s\n' "${BINDINGS[@]}" | rofi -dmenu -i -markup-rows -p "Hyprland Keybinds:" -theme /home/toby/.config/rofi/catppuccin-lavrent-mocha.rasi)
 
-SUPER + Scroll Up/Down → Cycle Workspaces
-SUPER + Left-Click     → Move Window
-SUPER + Right-Click    → Resize Window
+# extract cmd from span <span color='gray'>cmd</span>
+CMD=$(echo "$CHOICE" | sed -n 's/.*<span color='\''gray'\''>\(.*\)<\/span>.*/\1/p')
 
-XF86AudioRaiseVolume   → Volume Up
-XF86AudioLowerVolume   → Volume Down
-XF86AudioMute          → Mute
-XF86AudioMicMute       → Mute Microphone
-XF86MonBrightnessUp    → Brightness Up
-XF86MonBrightnessDown  → Brightness Down
-
-XF86AudioNext          → Next Track
-XF86AudioPrev          → Previous Track
-XF86AudioPlay          → Play / Pause
-XF86AudioPause         → Play / Pause
-
-SUPER + ALT + N        → Netflix
-SUPER + ALT + Y        → YouTube
-SUPER + ALT + D        → Discord
-"
-
-echo -e "$options" | rofi -dmenu -i -p "Hyprland Keybinds" -theme "$THEME"
+# execute it if first word is exec else use hyprctl dispatch
+if [[ $CMD == exec* ]]; then
+  eval "$CMD"
+else
+  hyprctl dispatch "$CMD"
+fi

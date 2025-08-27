@@ -118,4 +118,3 @@ element-text .active, element-text .urgent {
     show-icons: true;        /* keep icons if you want */
     show-entry-description: false;  /* hide the bracketed text */
 }
-
