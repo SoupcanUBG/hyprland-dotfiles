@@ -17,6 +17,7 @@ if [[ "$STATUS" == "1" ]]; then
   sleep 1.3
   mv /home/toby/.config/waybar/1.css /home/toby/.config/waybar/style.css
   sleep 1.3
+  wallust run /home/toby/Pictures/wallpapers/20.png
   /home/toby/.config/waybar/reload
 
   # Toggle status
@@ -25,10 +26,12 @@ if [[ "$STATUS" == "1" ]]; then
 elif [[ "$STATUS" == "2" ]]; then
   # 2.sh actions
   swww img /home/toby/Pictures/wallpapers/favourites/03.png --transition-type wipe --transition-angle 30 --transition-step 90
+
   mv /home/toby/.config/waybar/style.css /home/toby/.config/waybar/1.css
   sleep 1.3
   mv /home/toby/.config/waybar/2.css /home/toby/.config/waybar/style.css
   sleep 1.3
+  wallust run /home/toby/Pictures/wallpapers/03.png
   /home/toby/.config/waybar/reload
 
   # Toggle status
