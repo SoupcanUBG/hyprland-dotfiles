@@ -1,0 +1,24 @@
+#!/bin/bash/
+cp -r ~/.config ~/.config.bak
+rm -rf ~/.config/waybar
+rm -rf ~/.config/cava
+rm -rf ~/.config/rmpc
+rm -rf ~/.config/hypr
+rm -rf ~/.config/kitty
+rm -rf ~/.config/nvim
+rm -rf ~/.config/rofi
+rm -rf ~/.config/starship.toml
+rm -rf ~/.config/fastfetch
+rm -rf ~/.config/mpd
+rm -rf ~/.config/swaync
+cp -r ~/hyprland-dotfiles/.config/waybar/ ~/.config/
+cp -r ~/hyprland-dotfiles/.config/cava/ ~/.config/
+cp -r ~/hyprland-dotfiles/.config/rmpc/ ~/.config/
+cp -r ~/hyprland-dotfiles/.config/hypr/ ~/.config/
+cp -r ~/hyprland-dotfiles/.config/kitty/ ~/.config/
+cp -r ~/hyprland-dotfiles/.config/nvim/ ~/.config/
+cp -r ~/hyprland-dotfiles/.config/rofi/ ~/.config/
+cp -r ~/hyprland-dotfiles/.config/starship.toml ~/.config/
+cp -r ~/hyprland-dotfiles/.config/fastfetch/ ~/.config/
+cp -r ~/hyprland-dotfiles/.config/mpd/ ~/.config/
+cp -r ~/hyprland-dotfiles/.config/swaync/ ~/.config/
