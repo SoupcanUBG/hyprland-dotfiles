@@ -1,4 +1,4 @@
-#!/bin/bash/
+#!/bin/bash
 cp -r ~/.config ~/.config.bak
 rm -rf ~/.config/waybar
 rm -rf ~/.config/cava
@@ -22,3 +22,4 @@ cp -r ~/hyprland-dotfiles/.config/starship.toml ~/.config/
 cp -r ~/hyprland-dotfiles/.config/fastfetch/ ~/.config/
 cp -r ~/hyprland-dotfiles/.config/mpd/ ~/.config/
 cp -r ~/hyprland-dotfiles/.config/swaync/ ~/.config/
+sudo reboot

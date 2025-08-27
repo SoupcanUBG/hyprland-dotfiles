@@ -4,11 +4,10 @@
   min-height: 0;
   font-family: JetBrainsMono Nerd Font;
   font-size: 13px;
-  color: #222020; /* dark gray text everywhere */
 }
 
 window#waybar {
-  background-color: rgba(24, 24, 37, 0.75); /* semi-transparent bar */
+      background-color: rgba(24, 24, 37, 0); /* same color, but 60% opaque */
   transition-property: background-color;
   transition-duration: 0.5s;
 }
@@ -17,38 +16,40 @@ window#waybar.hidden {
   opacity: 0.5;
 }
 
-/* --- Workspaces --- */
 #workspaces {
   background-color: transparent;
 }
 
 #workspaces button {
   all: initial;
+  /* Remove GTK theme values (waybar #1351) */
   min-width: 0;
+  /* Fix weird spacing in materia (waybar #450) */
+  box-shadow: inset 0 -3px transparent;
+  /* Use box-shadow instead of border so the text isn't offset */
   padding: 6px 18px;
   margin: 6px 3px;
   border-radius: 4px;
-  background-color:   #1e1e2e; /* inactive = white */
-  color: #ffffff;
+  background-color: #1e1e2e;
+  color: #939DB8;
 }
 
 #workspaces button.active {
-  color: #222020;
-  background-color: #cba6f7; /* purple active */
+  color: #939DB8;
+  background-color: #2b2d3b;
 }
 
 #workspaces button:hover {
   box-shadow: inherit;
   text-shadow: inherit;
-  color: #222020;
-  background-color: #cdd6f4;
+  color: #1e1e2e;
+  background-color: #939DB8;
 }
 
 #workspaces button.urgent {
   background-color: #f38ba8;
 }
 
-/* --- Modules --- */
 #memory,
 #custom-power,
 #battery,
@@ -60,14 +61,12 @@ window#waybar.hidden {
   border-radius: 4px;
   margin: 6px 3px;
   padding: 6px 12px;
-  background-color: rgba(30, 30, 46, 0.95); /* semi-solid */
-  color: #222020;
+  background-color: #1e1e2e;
+  color: #181825;
 }
 
 #custom-power {
   margin-right: 6px;
-  background-color: #cba6f7;
-  color: #222020;
 }
 
 #custom-logo {
@@ -79,39 +78,66 @@ window#waybar.hidden {
   color: #1793d1;
 }
 
-#memory { background-color: #fab387; }
-#battery { background-color: #f38ba8; }
+#memory {
+  background-color: #fab387;
+}
+
+#battery {
+  background-color: #f38ba8;
+}
+
 #battery.warning,
 #battery.critical,
 #battery.urgent {
   background-color: #ff0000;
-  color: #ffff00;
-}
-#battery.charging {
-  background-color: #a6e3a1;
-  color: #222020;
-}
-#backlight { background-color: #fab387; }
-#wireplumber { background-color: #cba6f7; }
-#network {
-  background-color: #94e2d5;
-  padding-right: 17px;
-}
-#clock {
-  font-family: JetBrainsMono Nerd Font;
-  background-color: #cba6f7;
+  color: #FFFF00;
 }
 
-.clock.24hr, .clock.12hr {
-  font-family: "JetBrainsMono Nerd Font";
-  background-color: #cba6f7;
-  color: #222020;
+#battery.charging {
+  background-color: #a6e3a1;
+  color: #181825;
+}
+
+#backlight {
+  background-color: #fab387;
+}
+
+#wireplumber {
+  color: #939DB8;
+  background-color: #313244;
+}
+
+#network {
+  background-color: #313244;
+  padding-right: 17px;
+}
+
+#clock {
+  color: #939DB8;
+  font-family: JetBrainsMono Nerd Font;
+  background-color: #313244;
+}
+.clock.24hr {
+    color: white;
+    font-family: "JetBrainsMono Nerd Font";
+    background-color: #313244;
+}
+.clock.12hr {
+     color: white;
+    font-family: "JetBrainsMono Nerd Font";
+    background-color: #313244;
+}
+
+
+#custom-power {
+  background-color: #313244;
+  color: #939DB8;
 }
 
 tooltip {
   border-radius: 8px;
   padding: 15px;
-  background-color: rgba(19, 24, 34, 0.95);
-  color:  #1e1e2e;
+  background-color: #ffffff;
 }
+
 
